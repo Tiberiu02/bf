@@ -4,8 +4,6 @@ import sys
 
 import runbf
 
-print( sys.argv )
-
 BF_FILE = sys.argv[1]
 WATCH = False
 if len( sys.argv ) > 2 and sys.argv[2] == 'watch':
@@ -18,7 +16,8 @@ if not os.path.exists( BF_FILE ):
 prev_timestamp = 0
 
 if not WATCH:
-    print( 'output: ', end = '' )
+    print( 'output: ', end='' )
+    sys.stdout.flush()
     runbf.run( BF_FILE )
     sys.exit( 0 )
 
@@ -28,6 +27,7 @@ while True:
     if prev_timestamp != curr_timestamp:
         print( 'File Changed: running...' )
         print( 'output: ', end = '' )
+        sys.stdout.flush()
         runbf.run( BF_FILE )
         prev_timestamp = curr_timestamp
 
