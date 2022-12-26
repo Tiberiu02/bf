@@ -34,3 +34,5 @@ def run( file_path ):
         src.close()
 
         subprocess.run( ['g++', '-Wall', '-O2', SOURCE_PATH, '-o', EXEC_PATH] )
+
+        print( '' )
