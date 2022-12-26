@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "coffeefuck": "^1.0.3",
+    "js-brainfuck": "^1.0.6",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1"
   },
